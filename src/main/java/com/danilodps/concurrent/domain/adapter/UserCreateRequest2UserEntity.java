@@ -11,7 +11,7 @@ public class UserCreateRequest2UserEntity {
 
     public static UserEntity convert(UserCreateRequest userCreateRequest){
         return UserEntity.builder()
-                .username(userCreateRequest.username())
+                .username(userCreateRequest.getUsername())
                 .createdAt(LocalDateTime.now())
                 .build();
     }

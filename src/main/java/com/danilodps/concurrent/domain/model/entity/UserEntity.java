@@ -15,7 +15,6 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Entity(name = "USER_ENTITY")
 public class UserEntity implements Serializable {
-    private static final long SERIAL = 271382;
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
