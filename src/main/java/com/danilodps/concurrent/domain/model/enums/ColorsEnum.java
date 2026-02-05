@@ -1,4 +1,4 @@
-package com.danilodps.concurrent.domain;
+package com.danilodps.concurrent.domain.model.enums;
 
 import lombok.Getter;
 
