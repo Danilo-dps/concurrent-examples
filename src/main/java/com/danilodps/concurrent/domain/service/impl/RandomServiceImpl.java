@@ -33,7 +33,8 @@ public class RandomServiceImpl implements RandomService {
             case 4 -> ColorsEnum.GREEN.getColor();
             case 5 -> ColorsEnum.BLUE.getColor();
             case 6 -> ColorsEnum.INDIGO.getColor();
-            default -> ColorsEnum.VIOLET.getColor();
+            case 7 -> ColorsEnum.VIOLET.getColor();
+            default -> "";
         };
     }
 
