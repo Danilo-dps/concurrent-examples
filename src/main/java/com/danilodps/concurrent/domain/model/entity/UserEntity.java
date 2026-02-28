@@ -1,6 +1,8 @@
 package com.danilodps.concurrent.domain.model.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,7 +19,6 @@ import java.time.LocalDateTime;
 public class UserEntity implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "USER_ID")
     private String userId;
 
