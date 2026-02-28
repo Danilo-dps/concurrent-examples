@@ -16,6 +16,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.UUID;
+
 @Slf4j
 @Service
 @RequiredArgsConstructor
@@ -35,6 +37,7 @@ public class UserServiceImpl implements UserService {
     public UserResponse create(UserCreateRequest userCreateRequest) {
         log.info("Criando usuário");
         UserEntity user = UserCreateRequest2UserEntity.convert(userCreateRequest);
+        user.setUserId(UUID.randomUUID().toString());
         userEntityRepository.saveAndFlush(user);
 
         asyncService.getAsyncValue(user.getUserId());
